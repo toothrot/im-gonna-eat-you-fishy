@@ -1,7 +1,7 @@
 function dotime
 	set start (date)
 	set startsec (date +%s)
-	echo \033k$argv\033\134
+	echo \033k$argv[1]\033\134
 	eval $argv
 	set end (date)
 	set endsec (date +%s)
@@ -12,7 +12,6 @@ function dotime
 	growlnotify -t "$argv" -m "$total seconds
 $start
 $end"
-
 
 
 end
