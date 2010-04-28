@@ -1,7 +1,4 @@
 function threeallel
-	rake parallel:features[3]
-
-	and rake parallel:spec[3]
-
+	rake parallel:features[3] parallel:spec[3]
 
 end

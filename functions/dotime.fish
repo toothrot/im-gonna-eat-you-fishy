@@ -9,6 +9,7 @@ function dotime
 	echo "------------"
 	echo " Started at:"\t$start
 	echo "Finished at:"\t$end
+	echo "Took" $total "Seconds"
 	growlnotify -t "$argv" -m "$total seconds
 $start
 $end"
