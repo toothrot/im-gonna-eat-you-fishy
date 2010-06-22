@@ -5,14 +5,15 @@ function dotime
 	eval $argv
 	set end (date)
 	set endsec (date +%s)
-	set total (dc -e "$endsec $startsec - p")
+	set total (math "$endsec - $startsec")
+	set minutes (math "$total / 60")
+	set seconds (math "$total % 60")
 	echo "------------"
 	echo " Started at:"\t$start
 	echo "Finished at:"\t$end
-	echo "Took" $total "Seconds"
+	echo "Took $minutes:$seconds"
 	growlnotify -t "$argv" -m "$total seconds
 $start
 $end"
-
 
 end
